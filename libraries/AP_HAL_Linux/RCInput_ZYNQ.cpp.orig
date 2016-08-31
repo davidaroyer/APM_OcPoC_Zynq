@@ -13,7 +13,7 @@
 #include <AP_HAL/AP_HAL.h>
 
 #include "GPIO.h"
-<<<<<<< 3861a1b1bac77905e952b5774229e9cb506ab8c1
+<<<<<<< 134c21c7fd2463e6692e31bed882f73be3282491
 
 #define RCIN_ZYNQ_PULSE_INPUT_BASE  0xFF200000
 
