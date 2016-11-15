@@ -31,6 +31,11 @@
 #include "RCInput_UDP.h"
 #include "RCInput_115200.h"
 #include "RCInput_Multi.h"
+<<<<<<< 99d8e746f18a49f08d47002f9afef0a8936d0966
+#include "RCInput_ZYNQ.h"
+#include "RCOutput_AeroIO.h"
+=======
+>>>>>>> minor cleanup
 #include "RCInput_ZYNQ.h"
 #include "RCOutput_AeroIO.h"
 #include "RCOutput_AioPRU.h"
@@ -70,11 +75,7 @@ static UARTDriver uartADriver(true);
 #if CONFIG_HAL_BOARD_SUBTYPE == HAL_BOARD_SUBTYPE_LINUX_NAVIO || \
     CONFIG_HAL_BOARD_SUBTYPE == HAL_BOARD_SUBTYPE_LINUX_NAVIO2 || \
     CONFIG_HAL_BOARD_SUBTYPE == HAL_BOARD_SUBTYPE_LINUX_BH     || \
-<<<<<<< b40330bcde1075005a7f487830dec86cab0dc2cb
     CONFIG_HAL_BOARD_SUBTYPE == HAL_BOARD_SUBTYPE_LINUX_ALTERA
-=======
-	CONFIG_HAL_BOARD_SUBTYPE == HAL_BOARD_SUBTYPE_LINUX_ALTERA
->>>>>>> Aerotenna Altera OcPoC Ardupilot is created!
 static SPIUARTDriver uartBDriver;
 #else
 static UARTDriver uartBDriver(false);
