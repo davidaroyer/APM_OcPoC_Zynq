@@ -274,39 +274,34 @@ bool SPIDevice::transfer(const uint8_t * send, uint32_t send_len,
     	len_t = 2;
     	send_t[0] = *send;
     	send_t[1] = *(send + 1);
-<<<<<<< 17c7a4035d530ed8e84be6c271e2beeb42daaf4a
     }
     else
     {
     	len_t = recv_len + 1;
     	send_t[0] = *send;
+    }
+
+
+    msgs[0].tx_buf = (uint64_t) send_t;
+    msgs[0].rx_buf = (uint64_t) recv_t;
+    msgs[0].len = len_t;
+    msgs[0].speed_hz = _speed;
+    msgs[0].delay_usecs = 0;
+    msgs[0].bits_per_word = _desc.bits_per_word;
+    msgs[0].cs_change = 0;
+
+<<<<<<< HEAD
+
+    msgs[0].tx_buf = (uint64_t) send_t;
+    msgs[0].rx_buf = (uint64_t) recv_t;
+    msgs[0].len = len_t;
+    msgs[0].speed_hz = _speed;
+    msgs[0].delay_usecs = 0;
+    msgs[0].bits_per_word = _desc.bits_per_word;
+    msgs[0].cs_change = 0;
+
 =======
->>>>>>> Aerotenna Altera OcPoC Ardupilot is created!
-    }
-    else
-    {
-    	len_t = recv_len + 1;
-    	send_t[0] = *send;
-    }
-
-
-    msgs[0].tx_buf = (uint64_t) send_t;
-    msgs[0].rx_buf = (uint64_t) recv_t;
-    msgs[0].len = len_t;
-    msgs[0].speed_hz = _speed;
-    msgs[0].delay_usecs = 0;
-    msgs[0].bits_per_word = _desc.bits_per_word;
-    msgs[0].cs_change = 0;
-
-
-    msgs[0].tx_buf = (uint64_t) send_t;
-    msgs[0].rx_buf = (uint64_t) recv_t;
-    msgs[0].len = len_t;
-    msgs[0].speed_hz = _speed;
-    msgs[0].delay_usecs = 0;
-    msgs[0].bits_per_word = _desc.bits_per_word;
-    msgs[0].cs_change = 0;
-
+>>>>>>> e33425111b9e6017f59d0c679666284a8b75936b
     int r;
     if (_bus.last_mode == _desc.mode) {
         /*
